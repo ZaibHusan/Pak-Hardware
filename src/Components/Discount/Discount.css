@@ -1,0 +1,182 @@
+.Discount {
+    width: 100%;
+    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 10px 10px;
+    padding-top: 50px;
+    gap: 30px;
+}
+
+
+
+.discount-left,
+.discount-right {
+    height: 250px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.discount-left img,
+.discount-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px ;
+}
+
+
+.discount-left img:hover,
+.discount-right img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.discount-right-text,
+.discount-left-text {
+    position: absolute;
+    color: #fff;
+    inset: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 50px;
+}
+
+.discount-right-text p,
+.discount-left-text p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.discount-right-text h1,
+.discount-left-text h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    line-height: 2rem;
+    letter-spacing: 1px;
+}
+
+.discount-right-text h1 span:first-child,
+.discount-left-text h1 span:first-child {
+    font-weight: bold;
+}
+
+.discount-right-text button,
+.discount-left-text button {
+    padding: 15px 20px;
+    border: none;
+    background-color: #DE322C;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+
+}
+
+
+.discount-left-text h1 span:first-child {
+    color: #FFB700;
+}
+
+.discount-right-text {
+    color:black;
+}
+
+
+
+
+
+
+@media (max-width: 1000px) {
+    .Discount {
+        gap: 0px;
+        padding: 10px 10px;
+        padding-top: 30px;
+    }
+    .discount-left,
+    .discount-right {
+        height: 300px;
+    }
+    .discount-left-text,
+    .discount-right-text {
+        padding: 10px 30px;
+    }
+    .discount-right-text p,
+    .discount-left-text p {
+        font-size: 1rem;
+    }
+    .discount-right-text h1,
+    .discount-left-text h1 {
+        font-size: 1.5rem;
+        gap: 1px;
+        line-height: 1.5rem;
+    }
+    .discount-right-text button,
+    .discount-left-text button {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+@media (max-width:800px){
+    .Discount{
+        grid-template-columns: 1fr;
+        padding: 10px 10px;
+        padding-top: 30px;
+    }
+    .discount-left,
+    .discount-right{
+        height: 250px;
+        padding: 10px;
+    }
+}
+
+/* lets try for mobile  */
+
+@media (max-width:500px){
+    .Discount{
+        grid-template-columns: 1fr;
+        padding: 10px 10px;
+        padding-top: 30px;
+    }
+    .discount-left,
+    .discount-right{
+        height: 200px;
+        padding: 10px;
+    }
+    .discount-left-text,
+    .discount-right-text{
+        padding: 10px 20px;
+    }
+    .discount-right-text p,
+    .discount-left-text p{
+        font-size: 0.8rem;
+    }
+    .discount-right-text h1,
+    .discount-left-text h1{
+        font-size: 1.2rem;
+        gap: 1px;
+        line-height: 1.2rem;
+    }
+    .discount-right-text button,
+    .discount-left-text button{
+        padding: 10px 15px;
+        font-size: 0.8rem;
+    }
+}

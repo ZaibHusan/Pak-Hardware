@@ -1,0 +1,155 @@
+/* ================= MAIN BAR ================= */
+.Navbottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 6px 12px;
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+  box-sizing: border-box;
+}
+
+/* ================= LEFT ================= */
+.navbottom-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #e53935;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.navbottom-left span {
+  font-size: 18px;
+}
+
+.navbottom-left p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* ================= SEARCH ================= */
+.navbottom-middle {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: 2px solid #e53935;
+  border-radius: 4px;
+  height: 42px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.navbottom-middle-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Select */
+.navbottom-middle-left select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+/* Divider */
+.navbottom-middle-container span {
+  color: #ccc;
+}
+
+/* Input */
+.navbottom-middle-right {
+  flex: 1;
+  height: 100%;
+}
+
+.navbottom-middle-right input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+/* Button */
+.navbottom-middle button {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 0 18px;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.navbottom-middle button:hover {
+  background: #d32f2f;
+}
+
+/* ================= RIGHT ================= */
+.navbottom-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-left:150px;
+}
+
+.navbottom-right span {
+  color: #e53935;
+  font-size: 18px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .navbottom-right {
+    display: none;
+  }
+  .Navbottom {
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .Navbottom {
+    gap: 10px;
+    padding: 6px 8px;
+  }
+
+  .navbottom-left {
+    display: none;
+  }
+
+  .navbottom-middle {
+    height: 38px;
+  }
+
+  .navbottom-middle-left {
+    display: none;
+  }
+
+  .navbottom-middle button {
+    padding: 0 14px;
+  }
+ .navbottom-middle-container span {
+  display: none;
+ }
+ .Navbottom {
+  padding-top: 0;
+ }
+}
