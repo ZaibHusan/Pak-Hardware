@@ -1,0 +1,223 @@
+/* ================= RESET / BASE ================= */
+.Contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #f6f7f9;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ================= CONTAINER ================= */
+.contact-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+/* ================= HERO ================= */
+.contact-hero {
+  width: 100%;
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+
+
+.hero-text-d {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-text-d h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.hero-text-d h1 span {
+  color: #ffb700;
+}
+
+.hero-text-d p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+.hero-text-d p span:nth-child(1) {
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ================= MAIN SECTION ================= */
+.contact-main {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+  display: flex;
+  gap: 40px;
+}
+
+/* ================= LEFT ================= */
+.main-left {
+  flex: 1;
+}
+
+.main-left-top h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.main-left-top p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.main-left-bottom {
+  display: flex;
+  gap: 20px;
+}
+
+.main-left-bottom-left,
+.main-left-bottom-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-left input,
+.main-left textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.main-left textarea {
+  resize: none;
+  min-height: 140px;
+}
+
+.main-left input:focus,
+.main-left textarea:focus {
+  border-color: #de322c;
+}
+
+/* Button */
+.main-left button {
+  margin-top: 5px;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  background: #de322c;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.main-left button:hover {
+  background: #b82822;
+}
+
+/* ================= RIGHT ================= */
+.main-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-righ-box {
+  background: #f9f9f9;
+  padding: 24px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.main-righ-box span {
+  font-size: 28px;
+  color: #de322c;
+}
+
+.main-righ-box h2 {
+  font-size: 1.1rem;
+  color: #111;
+}
+
+.main-righ-box p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ================= MAP ================= */
+.mapp-address {
+  width: 100%;
+  padding: 0 20px 60px;
+}
+
+.mapp-address iframe {
+  width: 100%;
+  height: 420px;
+  border-radius: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .contact-main {
+    flex-direction: column;
+  }
+
+  .main-left-bottom {
+    flex-direction: column;
+  }
+
+  .hero-text-d h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-main {
+    padding: 40px 15px;
+  }
+  .contact-hero {
+    height: 200px;
+  }
+
+  .hero-text-d h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text-d p {
+    font-size: 0.85rem;
+  }
+
+  .mapp-address iframe {
+    height: 300px;
+  }
+}

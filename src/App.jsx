@@ -7,6 +7,8 @@ import About from './Pages/About/About'
 import Contact from './Pages/Contact/Contact'
 import Navbottom from './Components/Navbottom/Navbottom'
 import Navbar from './Components/Navbar/Navbar'
+import Footer from './Components/Foooter/Foooter'
+import Product from './Pages/Product/Product'
 
 export default function App() {
   const [Routelist, setRoutelist] = useState([
@@ -26,6 +28,10 @@ export default function App() {
       path: "/contact",
       element: <Contact />
     },
+    {
+      path: "/product/:id",
+      element: <Product />
+    }
   ])
 
   const Location = useLocation();
@@ -47,7 +53,7 @@ export default function App() {
         ))}
       </Routes>
 
-
+<Footer />
 
     </div>
   )

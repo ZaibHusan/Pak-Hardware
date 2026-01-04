@@ -1,9 +1,11 @@
 import React from 'react'
 import "./Productcard.css"
+import { useNavigate } from 'react-router-dom'
 export default function Productcard() {
+    const navigate = useNavigate();
     return (
         <div className="Productcard">
-            <div className="productcard-conatiner">
+            <div onClick={()=>navigate("/product/:id")}  className="productcard-conatiner">
                 <div className="product-img">
                     <img src="https://prestashop.codezeel.com/PRS23/PRS230555/default/11-home_default/porter-cable-pcck640-impact-driver-14-inch.jpg" alt="" />
                 </div>

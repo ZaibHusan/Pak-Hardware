@@ -1,0 +1,193 @@
+/* ================= MAIN SECTION ================= */
+
+.Clients {
+    width: 100%;
+    background: #f7f7f7;
+    margin-top: 40px;
+}
+
+.clients-container {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    /* IMPORTANT */
+    gap: 40px;
+}
+
+/* ================= LEFT IMAGE (KEY PART) ================= */
+
+.clients-left {
+    width: 50%;
+    height: 400px;
+    /* same visual height as reference */
+    overflow: hidden;
+}
+
+.clients-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* fills area perfectly */
+    display: block;
+}
+
+.clients-left img:hover {
+    transform: scale(1.1);
+}
+
+/* ================= RIGHT CONTENT ================= */
+
+.clients-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.clients-right h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.clients-right .material-symbols-outlined {
+    font-size: 40px;
+}
+
+
+/* ================= REVIEW ================= */
+
+.clients-right-container {
+    max-width: 480px;
+}
+
+.clients-right-box h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.clients-right-box p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* ================= USER ================= */
+
+.clients-right-box-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.clients-right-box-user img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.clients-right-box-user-details h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.clients-right-box-user-details p {
+    font-size: 13px;
+    color: #777;
+    margin: 0;
+}
+
+/* ================= DOTS ================= */
+
+.changing-button {
+    display: flex;
+    gap: 8px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.changing-button-dot {
+    cursor: pointer;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.changing-button-dot.active {
+    color: #de322c;
+}
+
+.changing-button-dot .material-symbols-outlined {
+    font-size: 16px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .clients-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .clients-left,
+  .clients-right {
+    width: 100%;
+  }
+
+  .clients-left {
+    height: 320px;
+  }
+
+  .clients-right {
+    padding: 0 20px;
+    align-items: flex-start;
+  }
+
+  .clients-right h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .clients-left {
+    height: 260px;
+  }
+
+  .clients-right h1 {
+    font-size: 22px;
+  }
+
+  .clients-right-box h3 {
+    font-size: 18px;
+  }
+
+  .clients-right-box p {
+    font-size: 14px;
+  }
+
+  .clients-right-box-user img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .changing-button {
+    justify-content: center;
+  }
+ .client-decription {
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical; 
+  }
+}

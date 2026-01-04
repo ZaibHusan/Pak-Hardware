@@ -26,11 +26,14 @@
     border-radius: 10px ;
 }
 
+* {
+    transition: all 0.3s ease;
+}
 
-.discount-left img:hover,
-.discount-right img:hover {
+.discount-left:hover img,
+.discount-right:hover img {
     transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 .discount-right-text,

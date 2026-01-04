@@ -1,0 +1,297 @@
+/* ================= SHOP PAGE ================= */
+.Shop {
+  width: 100%;
+  background: #ffffff;
+}
+
+/* ================= LAYOUT ================= */
+.shop-container {
+  padding: 30px 20px;
+  display: flex;
+  gap: 30px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* ================= LEFT SIDEBAR ================= */
+.shop-left {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+/* -------- Category List -------- */
+.category-list {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #e5e5e5;
+}
+
+.category-list h1 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.category-list h1 a {
+  text-decoration: none;
+  color: #111;
+}
+
+.category-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.category-list li:last-child {
+  border-bottom: none;
+}
+
+.category-list li a {
+  text-decoration: none;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.category-list span {
+  font-size: 18px;
+  color: #aaa;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.category-list li:hover span {
+  color: #de322c;
+}
+
+/* -------- Filters -------- */
+.shop-filter {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.shop-filter h1 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.shop-filter h3 {
+  font-size: 0.9rem;
+  margin: 18px 0 10px;
+  font-weight: 600;
+}
+
+.shop-filter label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #444;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.shop-filter input[type="checkbox"] {
+  accent-color: #de322c;
+}
+
+/* ================= PRICE RANGE (SINGLE LINE) ================= */
+.price-range {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* container = the main line */
+.sigle-line {
+  position: relative;
+  flex: 1;
+  height: 6px;
+  background: #ddd;          /* MAIN LINE */
+  border-radius: 3px;
+}
+
+/* both sliders sit ON the same line */
+.sigle-line input[type="range"] {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 6px;
+  transform: translateY(-50%);
+  background: transparent;
+  pointer-events: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* thumbs */
+.sigle-line input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #de322c;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+/* hide tracks completely (we already have main line) */
+.sigle-line input[type="range"]::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
+.sigle-line input[type="range"]::-moz-range-track {
+  background: transparent;
+}
+
+.sigle-line input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #de322c;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* ================= RIGHT CONTENT ================= */
+.shop-right {
+  flex: 1;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+/* -------- Description -------- */
+.shop-decription p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* -------- Top Bar -------- */
+.shop-list-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.shop-list-top p {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.Sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Sort select {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background: #fff;
+}
+
+/* -------- Product Grid -------- */
+.shop-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+/* -------- Pagination -------- */
+.product-change {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.product-change p {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.product-change button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid #de322c;
+  background: transparent;
+  color: #de322c;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: 0.25s ease;
+}
+
+.product-change button:hover {
+  background: #de322c;
+  color: #fff;
+}
+
+/* ================= SHOP DETAILS ================= */
+.shop-details {
+  background: #ffffff;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .shop-left {
+    display: none;
+  }
+
+  .shop-container {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .shop-right {
+    padding: 20px 15px;
+  }
+
+  .shop-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 5px;
+  }
+
+  .shop-list-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .Sort select {
+    padding: 6px 8px;
+    font-size: 0.8rem;
+  }
+}

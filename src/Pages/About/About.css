@@ -1,0 +1,236 @@
+/* ================= RESET ================= */
+.About * {
+  box-sizing: border-box;
+}
+
+/* ================= PAGE ================= */
+.About {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  background: #fff;
+  color: #222;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ================= HERO ================= */
+.About-Hero {
+  width: 100%;
+  height: 32vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.About-Hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text-d {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-text-d h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.hero-text-d h1 span {
+  color: #de322c;
+  margin-right: 6px;
+}
+
+.hero-text-d p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.hero-text-d p span {
+  cursor: pointer;
+}
+
+.hero-text-d p span:hover {
+  color: #de322c;
+  text-decoration: underline;
+}
+
+/* ================= ABOUT SECTION ================= */
+.About_us {
+  width: 100%;
+  padding: 0 16px;
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.About_us img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.About_us_text {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.About_us_text h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.About_us_text p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #555;
+}
+
+/* ================= TEAM ================= */
+.our-team {
+  background: #f7f7f7;
+  padding: 40px 16px;
+}
+
+.out-team-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.out-team-header span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #de322c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.out-team-header h1 {
+  font-size: 1.7rem;
+  margin-top: 6px;
+}
+
+.our-team-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.team-member {
+  background: #fff;
+  padding: 18px 12px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.team-member h3 {
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.team-member p {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* ================= MAP ================= */
+.mapp-address {
+  width: 100%;
+  height: 280px;
+  margin: 30px 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mapp-address iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 768px) {
+  .About-Hero {
+    height: 45vh;
+  }
+
+  .hero-text-d h1 {
+    font-size: 2.8rem;
+  }
+
+  .About_us {
+    max-width: 1200px;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .About_us img {
+    width: 45%;
+    height: 360px;
+  }
+
+  .About_us_text {
+    width: 55%;
+  }
+
+  .our-team-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 1024px) {
+  .our-team-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .mapp-address {
+    height: 420px;
+  }
+}
+
+
+/* lets make it for phone  */
+
+@media (max-width: 500px) {
+    .About {
+        gap: 50px;
+    }
+    .About_us {
+        padding:20px 20px;
+    }
+    .About-Hero {
+        height: 150px;
+    }
+    .hero-text-d h1 {
+        font-size: 1.8rem;
+    }
+    .our-team-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

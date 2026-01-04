@@ -1,0 +1,95 @@
+/* ================= FOOTER ================= */
+
+.Footer {
+  width: 100%;
+  background: #000000;
+  color: #ffffff;
+  padding-top: 50px;
+}
+
+/* ================= CONTAINER ================= */
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+/* ================= BOX ================= */
+
+.footer-box h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #ffffff;
+  position: relative;
+}
+
+.footer-box h3::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: #de322c;
+  display: block;
+  margin-top: 6px;
+}
+
+.footer-box p {
+  font-size: 14px;
+  color: #cccccc;
+  line-height: 1.7;
+}
+
+/* ================= LIST ================= */
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-box ul li {
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-box ul li:hover {
+  color: #ffffff;
+  padding-left: 6px;
+}
+
+/* ================= BOTTOM ================= */
+
+.footer-bottom {
+  border-top: 1px solid #222;
+  margin-top: 40px;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #aaaaaa;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+  .footer-container {
+    gap: 30px;
+  }
+
+  .footer-box h3 {
+    font-size: 16px;
+  }
+
+  .footer-box p,
+  .footer-box ul li {
+    font-size: 13px;
+  }
+}
